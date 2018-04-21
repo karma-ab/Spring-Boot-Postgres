@@ -14,12 +14,16 @@ import org.springframework.web.bind.annotation.RestController;
 import com.project.demo.dto.CityDTO;
 import com.project.demo.entity.CityEntity;
 import com.project.demo.service.ICityService;
+import com.project.demo.service.ScheduledClassService;
 
 @RestController
 public class CityController {
     
     @Autowired	
     ICityService cityService;
+    
+    @Autowired
+    ScheduledClassService scheduledClass;
 
     @RequestMapping(value="/showCities",method=RequestMethod.GET)
     @ResponseBody
@@ -31,5 +35,10 @@ public class CityController {
         return cities;
     }
     
+    /*@RequestMapping(value="/enableScheduling",method = RequestMethod.GET)
+    public void checkScheduling() {
+    	scheduledClass.display();
+    }
+    */
     
 }
