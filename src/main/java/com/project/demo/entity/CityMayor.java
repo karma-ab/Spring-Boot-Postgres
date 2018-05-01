@@ -1,11 +1,15 @@
 package com.project.demo.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="CityMayorData")
@@ -16,9 +20,12 @@ public class CityMayor {
 	private Long cityMayorId;
 	
 	@OneToOne
+	@JoinColumn(unique=true,nullable=false)
+	@NotNull
 	private CityMaster city;
 	
 	@OneToOne
+	@JoinColumn(unique=true,nullable=false)
 	private MayorMaster mayor;
 
 	public Long getCityMayorId() {
@@ -85,6 +92,16 @@ public class CityMayor {
 		} else if (!mayor.equals(other.mayor))
 			return false;
 		return true;
+	}
+
+	public CityMayor( CityMaster city, MayorMaster mayor) {
+		super();
+		this.city = city;
+		this.mayor = mayor;
+	}
+
+	public CityMayor() {
+		
 	}
 	
 	

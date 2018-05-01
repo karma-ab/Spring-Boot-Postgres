@@ -3,6 +3,8 @@ package com.project.demo.controller;
 import java.io.IOException;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -20,7 +22,9 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.project.demo.dto.CityDTO;
+import com.project.demo.dto.CityMayorDTO;
 import com.project.demo.dto.MayorDTO;
+import com.project.demo.dto.MessageDTO;
 import com.project.demo.entity.CityMaster;
 import com.project.demo.entity.MayorMaster;
 import com.project.demo.service.ICityService;
@@ -47,10 +51,6 @@ public class CityController {
     @RequestMapping(value="/cityAdd",method=RequestMethod.POST)
     public List<CityMaster> addCity(@RequestBody List<CityDTO> jsonObj )
     {
-    	/*System.out.println("Inside ");
-    	ObjectMapper mapper = new ObjectMapper();
-    	TypeReference<List<CityDTO>> typeReference = new TypeReference<List<CityDTO>>() {};
-    	List<CityDTO> cityList = mapper.readValue(jsonObj.toString(),typeReference);*/
     	return cityService.addCity(jsonObj);
     }
     
@@ -60,6 +60,19 @@ public class CityController {
     	return cityService.addMayor(jsonObj);
     }
    
+    @RequestMapping(value="/showMayors",method=RequestMethod.GET)
+    @ResponseBody
+    public List<MayorDTO> findMayors() {       
+        
+        return  cityService.findMayors();
+    }
+    
+    @RequestMapping(value="/city/mayor/add",method=RequestMethod.POST)
+    public MessageDTO addCityMayor(@RequestBody List<CityMayorDTO> jsonObj )
+    {
+    	return cityService.addCityMayor(jsonObj);
+    }
+    
     
     /*@RequestMapping(value="/enableScheduling",method = RequestMethod.GET)
     public void checkScheduling() {

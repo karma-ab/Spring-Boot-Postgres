@@ -4,15 +4,20 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.json.JSONObject;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.project.demo.dto.CityDTO;
+import com.project.demo.dto.CityMayorDTO;
 import com.project.demo.dto.MayorDTO;
+import com.project.demo.dto.MessageDTO;
 import com.project.demo.entity.CityMaster;
+import com.project.demo.entity.CityMayor;
 import com.project.demo.entity.MayorMaster;
+import com.project.demo.repository.CityMayorRepository;
 import com.project.demo.repository.CityRepository;
 import com.project.demo.repository.MayorRepository;
 
@@ -25,6 +30,8 @@ public class CityService implements ICityService {
     @Autowired
     private MayorRepository mayorRepository;
 
+    @Autowired
+    private CityMayorRepository cityMayorRepository;
     @Override
     public List<CityDTO> findAll() {
 
@@ -72,5 +79,24 @@ public class CityService implements ICityService {
 			});
 		 
 		 return mayors;
+	}
+
+	@Override
+	public List<MayorDTO> findMayors() {
+		List<MayorMaster> mayors = (List<MayorMaster>) mayorRepository.findAll();
+		ModelMapper mapper = new ModelMapper();
+		Type listType = new TypeToken<List<MayorDTO>>() {}.getType();
+		return mapper.map(mayors,listType);
+	}
+
+	@Override
+	public MessageDTO addCityMayor(List<CityMayorDTO> obj) {
+		
+		obj.forEach(cityMayor -> {
+			cityMayorRepository.save(new CityMayor(cityRepository.findById(cityMayor.getCityId()).get(),mayorRepository.findById(cityMayor.getMayorId()).get()));
+		});
+		
+		MessageDTO msg = new MessageDTO("insertSuccessful");
+		return msg;
 	}
 }
