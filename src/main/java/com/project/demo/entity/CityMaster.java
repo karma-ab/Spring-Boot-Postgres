@@ -2,15 +2,17 @@ package com.project.demo.entity;
 
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "CITIES")
-public class CityEntity {
+@Table(name = "City_Master")
+public class CityMaster {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,11 +20,30 @@ public class CityEntity {
 
     private String name;
     private int population;
+    
+    @OneToOne(mappedBy="city")
+    private CityMayor cityMayor;
+    
+    public CityMaster(Long id, String name, int population, CityMayor cityMayor) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.population = population;
+		this.cityMayor = cityMayor;
+	}
 
-    public CityEntity() {
+	public CityMayor getCityMayor() {
+		return cityMayor;
+	}
+
+	public void setCityMayor(CityMayor cityMayor) {
+		this.cityMayor = cityMayor;
+	}
+
+	public CityMaster() {
     }
 
-    public CityEntity(Long id, String name, int population) {
+    public CityMaster(Long id, String name, int population) {
         this.id = id;
         this.name = name;
         this.population = population;
@@ -72,7 +93,7 @@ public class CityEntity {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final CityEntity other = (CityEntity) obj;
+        final CityMaster other = (CityMaster) obj;
         if (this.population != other.population) {
             return false;
         }
@@ -83,8 +104,8 @@ public class CityEntity {
     }
     
     @Override
-    public String toString() {
-        return "City{" + "id=" + id + ", name=" + name
-                + ", population=" + population + '}';
-    }
+	public String toString() {
+		return "CityMaster [id=" + id + ", name=" + name + ", population=" + population + ", cityMayor=" + cityMayor
+				+ "]";
+	}
 }

@@ -1,0 +1,20 @@
+package com.project.demo.profileConfig;
+
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+
+@Configuration
+@Profile("dev")
+public class DevCustomizer {
+	@Bean
+	public ConfigurableServletWebServerFactory webServerFactory() {
+		
+	    TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory();
+	    factory.setContextPath("/spring-boot-dev");
+	    factory.addConnectorCustomizers(connector -> connector.setPort(8484));
+	    return factory;
+	}
+}

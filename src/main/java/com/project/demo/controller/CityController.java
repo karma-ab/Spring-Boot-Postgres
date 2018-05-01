@@ -1,22 +1,34 @@
 package com.project.demo.controller;
 
+import java.io.IOException;
 import java.util.List;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.project.demo.dto.CityDTO;
-import com.project.demo.entity.CityEntity;
+import com.project.demo.dto.MayorDTO;
+import com.project.demo.entity.CityMaster;
+import com.project.demo.entity.MayorMaster;
 import com.project.demo.service.ICityService;
 import com.project.demo.service.ScheduledClassService;
 
+
 @RestController
+@RequestMapping("/")
 public class CityController {
     
     @Autowired	
@@ -27,13 +39,27 @@ public class CityController {
 
     @RequestMapping(value="/showCities",method=RequestMethod.GET)
     @ResponseBody
-    public List<CityDTO> findCities() {
+    public List<CityDTO> findCities() {       
         
-        List<CityDTO> cities = (List<CityDTO>) cityService.findAll();
-       
-        
-        return cities;
+        return  cityService.findAll();
     }
+    
+    @RequestMapping(value="/cityAdd",method=RequestMethod.POST)
+    public List<CityMaster> addCity(@RequestBody List<CityDTO> jsonObj )
+    {
+    	/*System.out.println("Inside ");
+    	ObjectMapper mapper = new ObjectMapper();
+    	TypeReference<List<CityDTO>> typeReference = new TypeReference<List<CityDTO>>() {};
+    	List<CityDTO> cityList = mapper.readValue(jsonObj.toString(),typeReference);*/
+    	return cityService.addCity(jsonObj);
+    }
+    
+    @RequestMapping(value="/mayorAdd",method=RequestMethod.POST)
+    public List<MayorMaster> addMayor(@RequestBody List<MayorDTO> jsonObj )
+    {
+    	return cityService.addMayor(jsonObj);
+    }
+   
     
     /*@RequestMapping(value="/enableScheduling",method = RequestMethod.GET)
     public void checkScheduling() {

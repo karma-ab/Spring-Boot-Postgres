@@ -5,9 +5,10 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
-import com.project.demo.entity.CityEntity;
+import com.project.demo.entity.CityMaster;
+
 
 @Repository
-public interface CityRepository extends PagingAndSortingRepository<CityEntity, Long> {
+public interface CityRepository extends PagingAndSortingRepository<CityMaster, Long> {
 
 }

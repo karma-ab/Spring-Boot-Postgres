@@ -1,0 +1,314 @@
+01-05-2018 14:13:04.686 [main] INFO  c.p.demo.ProjectNoticeApplication.logStarting - Starting ProjectNoticeApplication on Acer-Abhijit with PID 12360 (C:\Users\vishw\Documents\workspace-sts-3.9.3.RELEASE\ProjectNotice\target\classes started by vishw in C:\Users\vishw\Documents\workspace-sts-3.9.3.RELEASE\ProjectNotice)
+01-05-2018 14:13:04.698 [main] INFO  c.p.demo.ProjectNoticeApplication.logStartupProfileInfo - The following profiles are active: dev
+01-05-2018 14:13:04.912 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1749dbe8: startup date [Tue May 01 14:13:04 IST 2018]; root of context hierarchy
+01-05-2018 14:13:06.261 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$70a993c1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+01-05-2018 14:13:06.738 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8484 (http)
+01-05-2018 14:13:06.768 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+01-05-2018 14:13:06.769 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+01-05-2018 14:13:06.779 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_151\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_161/bin/server;C:/Program Files/Java/jre1.8.0_161/bin;C:/Program Files/Java/jre1.8.0_161/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Brackets\command;E:\POC\maven\apache-maven-3.5.2\bin;C:\Program Files\Cloud Foundry;C:\Program Files\IBM\Bluemix\bin;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Users\vishw\AppData\Local\Programs\Python\Python36-32\Sc;C:\Program Files\Java\jdk1.8.0_151\bin;C:\Users\vishw\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\vishw\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\vishw\AppData\Local\atom\bin;E:\POC\STS_64\sts-bundle\sts-3.9.3.RELEASE;;.]
+01-05-2018 14:13:06.905 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/spring-boot-dev].log - Initializing Spring embedded WebApplicationContext
+01-05-2018 14:13:06.913 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2001 ms
+01-05-2018 14:13:07.109 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+01-05-2018 14:13:07.117 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+01-05-2018 14:13:07.118 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+01-05-2018 14:13:07.125 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+01-05-2018 14:13:07.125 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+01-05-2018 14:13:07.370 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+01-05-2018 14:13:07.543 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+01-05-2018 14:13:07.712 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+01-05-2018 14:13:07.753 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+01-05-2018 14:13:07.930 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.16.Final}
+01-05-2018 14:13:07.964 [main] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+01-05-2018 14:13:08.020 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+01-05-2018 14:13:08.307 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL9Dialect
+01-05-2018 14:13:08.324 [main] INFO  o.h.e.j.e.i.LobCreatorBuilderImpl.makeLobCreatorBuilder - HHH000422: Disabling contextual LOB creation as connection was null
+01-05-2018 14:13:08.324 [main] INFO  org.hibernate.type.BasicTypeRegistry.register - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@2a1349cf
+01-05-2018 14:13:10.037 [main] INFO  o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@70ddf828'
+01-05-2018 14:13:10.044 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01-05-2018 14:13:10.567 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+01-05-2018 14:13:10.979 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1749dbe8: startup date [Tue May 01 14:13:04 IST 2018]; root of context hierarchy
+01-05-2018 14:13:11.056 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01-05-2018 14:13:11.102 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/cityAdd],methods=[POST]}" onto public java.util.List<com.project.demo.entity.CityMaster> com.project.demo.controller.CityController.addCity(java.util.List<com.project.demo.dto.CityDTO>)
+01-05-2018 14:13:11.114 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/mayorAdd],methods=[POST]}" onto public java.util.List<com.project.demo.entity.MayorMaster> com.project.demo.controller.CityController.addMayor(java.util.List<com.project.demo.dto.MayorDTO>)
+01-05-2018 14:13:11.115 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/showCities],methods=[GET]}" onto public java.util.List<com.project.demo.dto.CityDTO> com.project.demo.controller.CityController.findCities()
+01-05-2018 14:13:11.124 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+01-05-2018 14:13:11.125 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+01-05-2018 14:13:11.195 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+01-05-2018 14:13:11.196 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+01-05-2018 14:13:11.227 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache - Detected @ExceptionHandler methods in globalDefaultExceptionHandler
+01-05-2018 14:13:11.544 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+01-05-2018 14:13:11.552 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+01-05-2018 14:13:11.557 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+01-05-2018 14:13:11.615 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8484 (http) with context path '/spring-boot-dev'
+01-05-2018 14:13:11.627 [main] INFO  c.p.demo.ProjectNoticeApplication.logStarted - Started ProjectNoticeApplication in 7.568 seconds (JVM running for 14.033)
+01-05-2018 14:13:49.090 [http-nio-8484-exec-10] INFO  o.a.c.c.C.[.[.[/spring-boot-dev].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+01-05-2018 14:13:49.098 [http-nio-8484-exec-10] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+01-05-2018 14:13:49.129 [http-nio-8484-exec-10] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+01-05-2018 14:13:49.300 [http-nio-8484-exec-10] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService - HHH000397: Using ASTQueryTranslatorFactory
+01-05-2018 14:16:02.373 [main] INFO  c.p.demo.ProjectNoticeApplication.logStarting - Starting ProjectNoticeApplication on Acer-Abhijit with PID 12404 (C:\Users\vishw\Documents\workspace-sts-3.9.3.RELEASE\ProjectNotice\target\classes started by vishw in C:\Users\vishw\Documents\workspace-sts-3.9.3.RELEASE\ProjectNotice)
+01-05-2018 14:16:02.376 [main] INFO  c.p.demo.ProjectNoticeApplication.logStartupProfileInfo - The following profiles are active: dev
+01-05-2018 14:16:02.583 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7a3837ed: startup date [Tue May 01 14:16:02 IST 2018]; root of context hierarchy
+01-05-2018 14:16:04.038 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dda826c1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+01-05-2018 14:16:04.516 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8484 (http)
+01-05-2018 14:16:04.546 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+01-05-2018 14:16:04.546 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+01-05-2018 14:16:04.559 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_151\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_161/bin/server;C:/Program Files/Java/jre1.8.0_161/bin;C:/Program Files/Java/jre1.8.0_161/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Brackets\command;E:\POC\maven\apache-maven-3.5.2\bin;C:\Program Files\Cloud Foundry;C:\Program Files\IBM\Bluemix\bin;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Users\vishw\AppData\Local\Programs\Python\Python36-32\Sc;C:\Program Files\Java\jdk1.8.0_151\bin;C:\Users\vishw\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\vishw\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\vishw\AppData\Local\atom\bin;E:\POC\STS_64\sts-bundle\sts-3.9.3.RELEASE;;.]
+01-05-2018 14:16:04.702 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/spring-boot-dev].log - Initializing Spring embedded WebApplicationContext
+01-05-2018 14:16:04.702 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2119 ms
+01-05-2018 14:16:04.902 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+01-05-2018 14:16:04.917 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+01-05-2018 14:16:04.925 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+01-05-2018 14:16:04.926 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+01-05-2018 14:16:04.926 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+01-05-2018 14:16:05.179 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+01-05-2018 14:16:05.333 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+01-05-2018 14:16:05.401 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+01-05-2018 14:16:05.432 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+01-05-2018 14:16:05.665 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.16.Final}
+01-05-2018 14:16:05.679 [main] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+01-05-2018 14:16:05.773 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+01-05-2018 14:16:05.967 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL9Dialect
+01-05-2018 14:16:05.987 [main] INFO  o.h.e.j.e.i.LobCreatorBuilderImpl.makeLobCreatorBuilder - HHH000422: Disabling contextual LOB creation as connection was null
+01-05-2018 14:16:05.995 [main] INFO  org.hibernate.type.BasicTypeRegistry.register - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@62517c65
+01-05-2018 14:16:07.291 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01-05-2018 14:16:07.976 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+01-05-2018 14:16:08.355 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7a3837ed: startup date [Tue May 01 14:16:02 IST 2018]; root of context hierarchy
+01-05-2018 14:16:08.456 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01-05-2018 14:16:08.542 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/showCities],methods=[GET]}" onto public java.util.List<com.project.demo.dto.CityDTO> com.project.demo.controller.CityController.findCities()
+01-05-2018 14:16:08.551 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/cityAdd],methods=[POST]}" onto public java.util.List<com.project.demo.entity.CityMaster> com.project.demo.controller.CityController.addCity(java.util.List<com.project.demo.dto.CityDTO>)
+01-05-2018 14:16:08.551 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/mayorAdd],methods=[POST]}" onto public java.util.List<com.project.demo.entity.MayorMaster> com.project.demo.controller.CityController.addMayor(java.util.List<com.project.demo.dto.MayorDTO>)
+01-05-2018 14:16:08.563 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+01-05-2018 14:16:08.565 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+01-05-2018 14:16:08.608 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+01-05-2018 14:16:08.608 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+01-05-2018 14:16:08.643 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache - Detected @ExceptionHandler methods in globalDefaultExceptionHandler
+01-05-2018 14:16:09.063 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+01-05-2018 14:16:09.063 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+01-05-2018 14:16:09.072 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+01-05-2018 14:16:09.162 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8484 (http) with context path '/spring-boot-dev'
+01-05-2018 14:16:09.170 [main] INFO  c.p.demo.ProjectNoticeApplication.logStarted - Started ProjectNoticeApplication in 7.555 seconds (JVM running for 16.262)
+01-05-2018 14:16:37.361 [http-nio-8484-exec-2] INFO  o.a.c.c.C.[.[.[/spring-boot-dev].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+01-05-2018 14:16:37.387 [http-nio-8484-exec-2] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+01-05-2018 14:16:37.418 [http-nio-8484-exec-2] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+01-05-2018 14:16:56.015 [http-nio-8484-exec-9] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService - HHH000397: Using ASTQueryTranslatorFactory
+01-05-2018 14:26:30.517 [main] INFO  c.p.demo.ProjectNoticeApplication.logStarting - Starting ProjectNoticeApplication on Acer-Abhijit with PID 11804 (C:\Users\vishw\Documents\workspace-sts-3.9.3.RELEASE\ProjectNotice\target\classes started by vishw in C:\Users\vishw\Documents\workspace-sts-3.9.3.RELEASE\ProjectNotice)
+01-05-2018 14:26:30.522 [main] INFO  c.p.demo.ProjectNoticeApplication.logStartupProfileInfo - The following profiles are active: prod
+01-05-2018 14:26:30.782 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@570b2edd: startup date [Tue May 01 14:26:30 IST 2018]; root of context hierarchy
+01-05-2018 14:26:32.228 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5a67cac4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+01-05-2018 14:26:32.832 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8585 (http)
+01-05-2018 14:26:32.856 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+01-05-2018 14:26:32.856 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+01-05-2018 14:26:32.866 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_151\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_161/bin/server;C:/Program Files/Java/jre1.8.0_161/bin;C:/Program Files/Java/jre1.8.0_161/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Brackets\command;E:\POC\maven\apache-maven-3.5.2\bin;C:\Program Files\Cloud Foundry;C:\Program Files\IBM\Bluemix\bin;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Users\vishw\AppData\Local\Programs\Python\Python36-32\Sc;C:\Program Files\Java\jdk1.8.0_151\bin;C:\Users\vishw\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\vishw\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\vishw\AppData\Local\atom\bin;E:\POC\STS_64\sts-bundle\sts-3.9.3.RELEASE;;.]
+01-05-2018 14:26:33.009 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/spring-boot-prod].log - Initializing Spring embedded WebApplicationContext
+01-05-2018 14:26:33.010 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2228 ms
+01-05-2018 14:26:33.198 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+01-05-2018 14:26:33.203 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+01-05-2018 14:26:33.209 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+01-05-2018 14:26:33.210 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+01-05-2018 14:26:33.210 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+01-05-2018 14:26:33.428 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+01-05-2018 14:26:33.612 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+01-05-2018 14:26:33.894 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+01-05-2018 14:26:33.932 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+01-05-2018 14:26:34.147 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.16.Final}
+01-05-2018 14:26:34.158 [main] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+01-05-2018 14:26:34.250 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+01-05-2018 14:26:34.421 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL9Dialect
+01-05-2018 14:26:34.439 [main] INFO  o.h.e.j.e.i.LobCreatorBuilderImpl.makeLobCreatorBuilder - HHH000422: Disabling contextual LOB creation as connection was null
+01-05-2018 14:26:34.448 [main] INFO  org.hibernate.type.BasicTypeRegistry.register - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@2f6d6e10
+01-05-2018 14:26:35.451 [main] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl.handleException - GenerationTarget encountered exception accepting command : Error executing DDL via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:144)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:312)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:892)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.project.demo.ProjectNoticeApplication.main(ProjectNoticeApplication.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.maven.AbstractRunMojo$LaunchRunner.run(AbstractRunMojo.java:496)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "city_mayor_data" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:307)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:293)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:270)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:266)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 41 common frames omitted
+01-05-2018 14:26:35.469 [main] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl.handleException - GenerationTarget encountered exception accepting command : Error executing DDL via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:144)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:312)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:892)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1761)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1698)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.project.demo.ProjectNoticeApplication.main(ProjectNoticeApplication.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.maven.AbstractRunMojo$LaunchRunner.run(AbstractRunMojo.java:496)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "city_mayor_data" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:307)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:293)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:270)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:266)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 41 common frames omitted
+01-05-2018 14:26:35.512 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logWarning - SQL Warning Code: 0, SQLState: 00000
+01-05-2018 14:26:35.520 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logWarning - table "city_master" does not exist, skipping
+01-05-2018 14:26:35.521 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logWarning - SQL Warning Code: 0, SQLState: 00000
+01-05-2018 14:26:35.521 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logWarning - table "city_mayor_data" does not exist, skipping
+01-05-2018 14:26:35.522 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logWarning - SQL Warning Code: 0, SQLState: 00000
+01-05-2018 14:26:35.529 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logWarning - table "mayor_master" does not exist, skipping
+01-05-2018 14:26:35.530 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logWarning - SQL Warning Code: 0, SQLState: 00000
+01-05-2018 14:26:35.530 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper.logWarning - sequence "hibernate_sequence" does not exist, skipping
+01-05-2018 14:26:35.673 [main] INFO  o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@50fd6370'
+01-05-2018 14:26:35.676 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01-05-2018 14:26:36.182 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+01-05-2018 14:26:36.636 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@570b2edd: startup date [Tue May 01 14:26:30 IST 2018]; root of context hierarchy
+01-05-2018 14:26:36.711 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01-05-2018 14:26:36.777 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/mayorAdd],methods=[POST]}" onto public java.util.List<com.project.demo.entity.MayorMaster> com.project.demo.controller.CityController.addMayor(java.util.List<com.project.demo.dto.MayorDTO>)
+01-05-2018 14:26:36.779 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/cityAdd],methods=[POST]}" onto public java.util.List<com.project.demo.entity.CityMaster> com.project.demo.controller.CityController.addCity(java.util.List<com.project.demo.dto.CityDTO>)
+01-05-2018 14:26:36.779 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/showCities],methods=[GET]}" onto public java.util.List<com.project.demo.dto.CityDTO> com.project.demo.controller.CityController.findCities()
+01-05-2018 14:26:36.782 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+01-05-2018 14:26:36.793 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+01-05-2018 14:26:36.833 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+01-05-2018 14:26:36.835 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+01-05-2018 14:26:36.857 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache - Detected @ExceptionHandler methods in globalDefaultExceptionHandler
+01-05-2018 14:26:37.179 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+01-05-2018 14:26:37.180 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+01-05-2018 14:26:37.186 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+01-05-2018 14:26:37.231 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8585 (http) with context path '/spring-boot-prod'
+01-05-2018 14:26:37.234 [main] INFO  c.p.demo.ProjectNoticeApplication.logStarted - Started ProjectNoticeApplication in 7.418 seconds (JVM running for 17.524)
+01-05-2018 14:29:57.434 [main] INFO  c.p.demo.ProjectNoticeApplication.logStarting - Starting ProjectNoticeApplication on Acer-Abhijit with PID 14056 (C:\Users\vishw\Documents\workspace-sts-3.9.3.RELEASE\ProjectNotice\target\classes started by vishw in C:\Users\vishw\Documents\workspace-sts-3.9.3.RELEASE\ProjectNotice)
+01-05-2018 14:29:57.438 [main] INFO  c.p.demo.ProjectNoticeApplication.logStartupProfileInfo - The following profiles are active: prod
+01-05-2018 14:29:57.648 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31518c69: startup date [Tue May 01 14:29:57 IST 2018]; root of context hierarchy
+01-05-2018 14:29:58.972 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4fe99d1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+01-05-2018 14:29:59.402 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8585 (http)
+01-05-2018 14:29:59.433 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+01-05-2018 14:29:59.434 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.29
+01-05-2018 14:29:59.446 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_151\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_161/bin/server;C:/Program Files/Java/jre1.8.0_161/bin;C:/Program Files/Java/jre1.8.0_161/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Brackets\command;E:\POC\maven\apache-maven-3.5.2\bin;C:\Program Files\Cloud Foundry;C:\Program Files\IBM\Bluemix\bin;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Users\vishw\AppData\Local\Programs\Python\Python36-32\Sc;C:\Program Files\Java\jdk1.8.0_151\bin;C:\Users\vishw\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\vishw\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\vishw\AppData\Local\atom\bin;E:\POC\STS_64\sts-bundle\sts-3.9.3.RELEASE;;.]
+01-05-2018 14:29:59.661 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/spring-boot-prod].log - Initializing Spring embedded WebApplicationContext
+01-05-2018 14:29:59.661 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2014 ms
+01-05-2018 14:29:59.898 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+01-05-2018 14:29:59.903 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+01-05-2018 14:29:59.911 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+01-05-2018 14:29:59.912 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+01-05-2018 14:29:59.912 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+01-05-2018 14:30:00.215 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+01-05-2018 14:30:00.431 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+01-05-2018 14:30:00.488 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+01-05-2018 14:30:00.514 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+01-05-2018 14:30:00.708 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.16.Final}
+01-05-2018 14:30:00.756 [main] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+01-05-2018 14:30:00.956 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+01-05-2018 14:30:01.176 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL9Dialect
+01-05-2018 14:30:01.191 [main] INFO  o.h.e.j.e.i.LobCreatorBuilderImpl.makeLobCreatorBuilder - HHH000422: Disabling contextual LOB creation as connection was null
+01-05-2018 14:30:01.207 [main] INFO  org.hibernate.type.BasicTypeRegistry.register - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@377baf5f
+01-05-2018 14:30:02.255 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01-05-2018 14:30:02.826 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+01-05-2018 14:30:03.141 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31518c69: startup date [Tue May 01 14:29:57 IST 2018]; root of context hierarchy
+01-05-2018 14:30:03.204 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01-05-2018 14:30:03.265 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/cityAdd],methods=[POST]}" onto public java.util.List<com.project.demo.entity.CityMaster> com.project.demo.controller.CityController.addCity(java.util.List<com.project.demo.dto.CityDTO>)
+01-05-2018 14:30:03.272 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/showCities],methods=[GET]}" onto public java.util.List<com.project.demo.dto.CityDTO> com.project.demo.controller.CityController.findCities()
+01-05-2018 14:30:03.273 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/mayorAdd],methods=[POST]}" onto public java.util.List<com.project.demo.entity.MayorMaster> com.project.demo.controller.CityController.addMayor(java.util.List<com.project.demo.dto.MayorDTO>)
+01-05-2018 14:30:03.284 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+01-05-2018 14:30:03.285 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+01-05-2018 14:30:03.358 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+01-05-2018 14:30:03.359 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+01-05-2018 14:30:03.523 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache - Detected @ExceptionHandler methods in globalDefaultExceptionHandler
+01-05-2018 14:30:03.875 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+01-05-2018 14:30:03.877 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+01-05-2018 14:30:03.882 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+01-05-2018 14:30:03.931 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8585 (http) with context path '/spring-boot-prod'
+01-05-2018 14:30:03.936 [main] INFO  c.p.demo.ProjectNoticeApplication.logStarted - Started ProjectNoticeApplication in 7.139 seconds (JVM running for 13.095)
+01-05-2018 14:30:34.909 [http-nio-8585-exec-2] INFO  o.a.c.c.C.[.[.[/spring-boot-prod].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+01-05-2018 14:30:34.914 [http-nio-8585-exec-2] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+01-05-2018 14:30:34.944 [http-nio-8585-exec-2] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+01-05-2018 14:30:35.052 [http-nio-8585-exec-2] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService - HHH000397: Using ASTQueryTranslatorFactory
