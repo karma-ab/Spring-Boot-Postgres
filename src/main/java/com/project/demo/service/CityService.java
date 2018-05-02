@@ -4,9 +4,10 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.json.JSONObject;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +24,9 @@ import com.project.demo.repository.MayorRepository;
 
 @Service
 public class CityService implements ICityService {
-
+	
+	private final Logger log = LoggerFactory.getLogger(this.getClass());
+	
     @Autowired
     private CityRepository cityRepository;
     
@@ -41,7 +44,7 @@ public class CityService implements ICityService {
         	CityDTO obj = new CityDTO(city.getId(),city.getName(),city.getPopulation());
         	cityDto.add(obj);
         }
-        
+        log.info("City returned to the user");
         return cityDto;
     }
 
@@ -53,6 +56,7 @@ public class CityService implements ICityService {
 		Type listType = new TypeToken<List<CityMaster>>() {}.getType();
 		cities = mapper.map(cityList,listType);
 		cityRepository.saveAll(cities);
+		log.info("Cities added to the database");
 		/*cityList.forEach(city->{
 			CityMaster cityPersist = new CityMaster();
 			cityPersist.setName(city.getName());

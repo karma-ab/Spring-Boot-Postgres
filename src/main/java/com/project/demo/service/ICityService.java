@@ -1,9 +1,6 @@
 package com.project.demo.service;
 
 import java.util.List;
-
-import org.json.JSONObject;
-
 import com.project.demo.dto.CityDTO;
 import com.project.demo.dto.CityMayorDTO;
 import com.project.demo.dto.MayorDTO;
