@@ -1,5 +1,8 @@
 package com.project.demo;
 
+import javax.transaction.Transactional;
+
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -12,10 +15,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.project.demo.entity.CityMaster;
 import com.project.demo.repository.CityRepository;
 
-import javax.transaction.Transactional;
-
-import org.junit.Assert;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Transactional
@@ -24,18 +23,17 @@ public class ProjectNoticeApplicationTests {
 
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
 
-	 @Autowired
-	 private CityRepository cityRepository;
-	 
+	@Autowired
+	private CityRepository cityRepository;
 
 	@Test
 	public void cityAddTest() {
-		
+
 		CityMaster cityMaster = new CityMaster((long) 100, "TestCity", 5000);
 		CityMaster cityMasterTest = cityRepository.save(cityMaster);
 		log.info("Test case execution in progress :: adding City and verifying");
 		Assert.assertEquals(5000, cityMasterTest.getPopulation());
-		
+
 	}
 
 }

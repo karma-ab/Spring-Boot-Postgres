@@ -16,5 +16,5 @@ public class MessageDTO {
 		super();
 		this.message = message;
 	}
-	
+
 }

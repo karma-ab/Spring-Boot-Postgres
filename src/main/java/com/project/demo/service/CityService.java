@@ -24,82 +24,86 @@ import com.project.demo.repository.MayorRepository;
 
 @Service
 public class CityService implements ICityService {
-	
+
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
-	
-    @Autowired
-    private CityRepository cityRepository;
-    
-    @Autowired
-    private MayorRepository mayorRepository;
 
-    @Autowired
-    private CityMayorRepository cityMayorRepository;
-    @Override
-    public List<CityDTO> findAll() {
+	@Autowired
+	private CityRepository cityRepository;
 
-        List<CityMaster> cities = (List<CityMaster>) cityRepository.findAll();
-        List<CityDTO> cityDto = new ArrayList<CityDTO>();
-        for(CityMaster city : cities) {
-        	CityDTO obj = new CityDTO(city.getId(),city.getName(),city.getPopulation());
-        	cityDto.add(obj);
-        }
-        log.info("City returned to the user");
-        return cityDto;
-    }
+	@Autowired
+	private MayorRepository mayorRepository;
+
+	@Autowired
+	private CityMayorRepository cityMayorRepository;
+
+	@Override
+	public List<CityDTO> findAll() {
+
+		List<CityMaster> cities = (List<CityMaster>) cityRepository.findAll();
+		List<CityDTO> cityDto = new ArrayList<CityDTO>();
+		for (CityMaster city : cities) {
+			CityDTO obj = new CityDTO(city.getId(), city.getName(), city.getPopulation());
+			cityDto.add(obj);
+		}
+		log.info("City returned to the user");
+		return cityDto;
+	}
 
 	@Override
 	public List<CityMaster> addCity(List<CityDTO> cityList) {
-		List<CityMaster> cities ;
-		
+		List<CityMaster> cities;
+
 		ModelMapper mapper = new ModelMapper();
-		Type listType = new TypeToken<List<CityMaster>>() {}.getType();
-		cities = mapper.map(cityList,listType);
+		Type listType = new TypeToken<List<CityMaster>>() {
+		}.getType();
+		cities = mapper.map(cityList, listType);
 		cityRepository.saveAll(cities);
 		log.info("Cities added to the database");
-		/*cityList.forEach(city->{
-			CityMaster cityPersist = new CityMaster();
-			cityPersist.setName(city.getName());
-			cityPersist.setPopulation(city.getPopulation());	
-			cities.add(cityRepository.save(cityPersist));
-		});
-*/		return cities;
+		/*
+		 * cityList.forEach(city->{ CityMaster cityPersist = new CityMaster();
+		 * cityPersist.setName(city.getName());
+		 * cityPersist.setPopulation(city.getPopulation());
+		 * cities.add(cityRepository.save(cityPersist)); });
+		 */ return cities;
 	}
 
 	@Override
 	public List<MayorMaster> addMayor(List<MayorDTO> mayorList) {
-		List<MayorMaster> mayors = new ArrayList<>() ;
-		
-		/*ModelMapper mapper = new ModelMapper();
-		Type listType = new TypeToken<List<MayorMaster>>() {}.getType();
-		mayors = mapper.map(mayorList,listType);
-		 mayorRepository.saveAll(mayors);*/
-		 
-		 mayorList.forEach(mayor->{
-			 MayorMaster mayorPersist = new MayorMaster();
-			 mayorPersist.setName(mayor.getName());
-			 mayorPersist.setAge(mayor.getAge());	
-			 mayors.add(mayorRepository.save(mayorPersist));
-			});
-		 
-		 return mayors;
+		List<MayorMaster> mayors = new ArrayList<>();
+
+		/*
+		 * ModelMapper mapper = new ModelMapper(); Type listType = new
+		 * TypeToken<List<MayorMaster>>() {}.getType(); mayors =
+		 * mapper.map(mayorList,listType); mayorRepository.saveAll(mayors);
+		 */
+
+		mayorList.forEach(mayor -> {
+			MayorMaster mayorPersist = new MayorMaster();
+			mayorPersist.setName(mayor.getName());
+			mayorPersist.setAge(mayor.getAge());
+			mayors.add(mayorRepository.save(mayorPersist));
+		});
+
+		return mayors;
 	}
 
 	@Override
 	public List<MayorDTO> findMayors() {
 		List<MayorMaster> mayors = (List<MayorMaster>) mayorRepository.findAll();
 		ModelMapper mapper = new ModelMapper();
-		Type listType = new TypeToken<List<MayorDTO>>() {}.getType();
-		return mapper.map(mayors,listType);
+		Type listType = new TypeToken<List<MayorDTO>>() {
+		}.getType();
+		return mapper.map(mayors, listType);
 	}
 
 	@Override
 	public MessageDTO addCityMayor(List<CityMayorDTO> obj) {
-		
+
 		obj.forEach(cityMayor -> {
-			cityMayorRepository.save(new CityMayor(cityRepository.findById(cityMayor.getCityId()).get(),mayorRepository.findById(cityMayor.getMayorId()).get()));
+			cityMayorRepository.save(new CityMayor(cityRepository.findById(cityMayor.getCityId()).get(),
+					mayorRepository.findById(cityMayor.getMayorId()).get()));
 		});
-		
+
 		MessageDTO msg = new MessageDTO("insertSuccessful");
 		return msg;
 	}

@@ -11,10 +11,10 @@ import org.springframework.context.annotation.Profile;
 public class ProdCustomizer {
 	@Bean
 	public ConfigurableServletWebServerFactory webServerFactory() {
-		
-	    TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory();
-	    factory.setContextPath("/spring-boot-prod");
-	    factory.addConnectorCustomizers(connector -> connector.setPort(8585));
-	    return factory;
+
+		TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory();
+		factory.setContextPath("/spring-boot-prod");
+		factory.addConnectorCustomizers(connector -> connector.setPort(8585));
+		return factory;
 	}
 }

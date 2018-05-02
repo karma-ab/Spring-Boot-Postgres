@@ -10,20 +10,20 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name="CityMayorData")
+@Table(name = "CityMayorData")
 public class CityMayor {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long cityMayorId;
-	
+
 	@OneToOne
-	@JoinColumn(unique=true,nullable=false)
+	@JoinColumn(unique = true, nullable = false)
 	@NotNull
 	private CityMaster city;
-	
+
 	@OneToOne
-	@JoinColumn(unique=true,nullable=false)
+	@JoinColumn(unique = true, nullable = false)
 	private MayorMaster mayor;
 
 	public Long getCityMayorId() {
@@ -92,16 +92,14 @@ public class CityMayor {
 		return true;
 	}
 
-	public CityMayor( CityMaster city, MayorMaster mayor) {
+	public CityMayor(CityMaster city, MayorMaster mayor) {
 		super();
 		this.city = city;
 		this.mayor = mayor;
 	}
 
 	public CityMayor() {
-		
+
 	}
-	
-	
-	
+
 }

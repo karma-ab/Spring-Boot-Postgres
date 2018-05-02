@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import com.project.demo.entity.CityMaster;
 
-
 @Repository
 public interface CityRepository extends PagingAndSortingRepository<CityMaster, Long> {
 

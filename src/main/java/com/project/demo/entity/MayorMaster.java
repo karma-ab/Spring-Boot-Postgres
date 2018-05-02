@@ -8,22 +8,21 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-
 @Entity
-@Table(name="Mayor_Master")
+@Table(name = "Mayor_Master")
 public class MayorMaster {
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long mayorId;
-	
-	@Column(name="Name")
+
+	@Column(name = "Name")
 	private String name;
-	
-	@Column(name="Age")
+
+	@Column(name = "Age")
 	private int age;
-	
-	@OneToOne(mappedBy="mayor")
+
+	@OneToOne(mappedBy = "mayor")
 	private CityMayor cityMayor;
 
 	public MayorMaster() {
@@ -108,6 +107,5 @@ public class MayorMaster {
 			return false;
 		return true;
 	}
-	
-	
+
 }
