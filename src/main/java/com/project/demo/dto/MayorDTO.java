@@ -6,7 +6,7 @@ public class MayorDTO {
 	private String name;
 	private int age;
 
-	public long getMayorId() {
+	public Long getMayorId() {
 		return mayorId;
 	}
 
@@ -35,7 +35,7 @@ public class MayorDTO {
 		return "MayorDTO [mayorId=" + mayorId + ", name=" + name + ", age=" + age + "]";
 	}
 
-	public MayorDTO(long mayorId, String name, int age) {
+	public MayorDTO(Long mayorId, String name, int age) {
 		super();
 		this.mayorId = mayorId;
 		this.name = name;

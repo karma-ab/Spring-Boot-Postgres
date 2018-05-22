@@ -9,12 +9,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.project.demo.dto.AssetDTO;
 import com.project.demo.dto.CityDTO;
 import com.project.demo.dto.CityMayorDTO;
 import com.project.demo.dto.MayorDTO;
 import com.project.demo.dto.MessageDTO;
+import com.project.demo.entity.AssetInventory;
 import com.project.demo.entity.CityMaster;
 import com.project.demo.entity.MayorMaster;
+import com.project.demo.service.AssetService;
 import com.project.demo.service.ICityService;
 import com.project.demo.service.ScheduledClassService;
 
@@ -27,6 +30,9 @@ public class CityController {
 
 	@Autowired
 	ScheduledClassService scheduledClass;
+	
+	@Autowired
+	AssetService assetService;
 
 	@RequestMapping(value = "/showCities", method = RequestMethod.GET)
 	@ResponseBody
@@ -57,6 +63,12 @@ public class CityController {
 		return cityService.addCityMayor(jsonObj);
 	}
 
+	@RequestMapping(value="/sortAsset")
+	public List<AssetDTO> sortAsset()
+	{
+		return assetService.sortAsset();
+	}
+	
 	/*
 	 * @RequestMapping(value="/enableScheduling",method = RequestMethod.GET) public
 	 * void checkScheduling() { scheduledClass.display(); }

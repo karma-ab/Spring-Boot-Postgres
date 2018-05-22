@@ -1,5 +1,7 @@
 package com.project.demo.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
@@ -11,4 +13,7 @@ public interface MayorRepository extends PagingAndSortingRepository<MayorMaster,
 
 	@Query("Select m from MayorMaster m where m.name = ?1")
 	public MayorMaster findMayorbyName(String mayorName);
+	
+	@Query("Select m.name, m.age from MayorMaster m")
+	public List<Object> findMayorNames();
 }

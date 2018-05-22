@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@ControllerAdvice
+/*@ControllerAdvice
 class GlobalDefaultExceptionHandler {
 	public static final String DEFAULT_ERROR_VIEW = "error";
 
@@ -18,3 +18,4 @@ class GlobalDefaultExceptionHandler {
 		return new ErrorInfo(res.getStatus(), e.toString());
 	}
 }
+*/

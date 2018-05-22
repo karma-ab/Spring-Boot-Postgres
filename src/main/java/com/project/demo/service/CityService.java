@@ -75,7 +75,8 @@ public class CityService implements ICityService {
 
 	@Override
 	public List<MayorDTO> findMayors() {
-		List<MayorMaster> mayors = (List<MayorMaster>) mayorRepository.findAll();
+		//List<MayorMaster> mayors = (List<MayorMaster>) mayorRepository.findAll();
+		List<Object> mayors = mayorRepository.findMayorNames();
 		ModelMapper mapper = new ModelMapper();
 		Type listType = new TypeToken<List<MayorDTO>>() {}.getType();
 		log.info("Mayors List returned");
