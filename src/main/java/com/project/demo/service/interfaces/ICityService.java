@@ -1,4 +1,4 @@
-package com.project.demo.service;
+package com.project.demo.service.interfaces;
 
 import java.util.List;
 

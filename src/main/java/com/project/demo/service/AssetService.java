@@ -17,10 +17,11 @@ import com.project.demo.dto.AssetDTO;
 import com.project.demo.entity.AssetInventory;
 import com.project.demo.repository.AssetAddRepo;
 import com.project.demo.repository.AssetRepo;
+import com.project.demo.service.interfaces.IAssetService;
 
 
 @Service
-public class AssetService implements AssetServiceI {
+public class AssetService implements IAssetService {
 
 	@Autowired
 	AssetRepo assetRepo;

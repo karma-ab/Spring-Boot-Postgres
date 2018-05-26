@@ -14,12 +14,14 @@ import com.project.demo.dto.CityDTO;
 import com.project.demo.dto.CityMayorDTO;
 import com.project.demo.dto.MayorDTO;
 import com.project.demo.dto.MessageDTO;
+import com.project.demo.dto.MongoUserDTO;
 import com.project.demo.entity.AssetInventory;
 import com.project.demo.entity.CityMaster;
 import com.project.demo.entity.MayorMaster;
 import com.project.demo.service.AssetService;
-import com.project.demo.service.ICityService;
+import com.project.demo.service.MongoService;
 import com.project.demo.service.ScheduledClassService;
+import com.project.demo.service.interfaces.ICityService;
 
 @RestController
 @RequestMapping("/")
@@ -33,6 +35,9 @@ public class CityController {
 	
 	@Autowired
 	AssetService assetService;
+	
+	@Autowired
+	MongoService mongoService;
 
 	@RequestMapping(value = "/showCities", method = RequestMethod.GET)
 	@ResponseBody
@@ -69,6 +74,19 @@ public class CityController {
 		return assetService.sortAsset();
 	}
 	
+	
+	@RequestMapping(value="/fetchUsers")
+	public List<MongoUserDTO> getUsers()
+	{
+		return mongoService.getUsers();
+	}
+	
+
+	@RequestMapping(value="/saveUsers",method = RequestMethod.POST)
+	public List<MongoUserDTO> saveUsers(@RequestBody List<MongoUserDTO> userObj)
+	{
+		return mongoService.saveUsers(userObj);
+	}
 	/*
 	 * @RequestMapping(value="/enableScheduling",method = RequestMethod.GET) public
 	 * void checkScheduling() { scheduledClass.display(); }

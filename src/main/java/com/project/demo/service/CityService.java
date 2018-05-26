@@ -21,6 +21,7 @@ import com.project.demo.entity.MayorMaster;
 import com.project.demo.repository.CityMayorRepository;
 import com.project.demo.repository.CityRepository;
 import com.project.demo.repository.MayorRepository;
+import com.project.demo.service.interfaces.ICityService;
 
 @Service
 public class CityService implements ICityService {
