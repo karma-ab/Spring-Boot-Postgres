@@ -21,6 +21,7 @@ import com.project.demo.entity.MayorMaster;
 import com.project.demo.service.AssetService;
 import com.project.demo.service.MongoService;
 import com.project.demo.service.ScheduledClassService;
+import com.project.demo.service.ThreadService;
 import com.project.demo.service.interfaces.ICityService;
 
 @RestController
@@ -38,6 +39,9 @@ public class CityController {
 	
 	@Autowired
 	MongoService mongoService;
+	
+	@Autowired
+	ThreadService threadService;
 
 	@RequestMapping(value = "/showCities", method = RequestMethod.GET)
 	@ResponseBody
@@ -86,6 +90,12 @@ public class CityController {
 	public List<MongoUserDTO> saveUsers(@RequestBody List<MongoUserDTO> userObj)
 	{
 		return mongoService.saveUsers(userObj);
+	}
+	
+	@RequestMapping(value="/startThreads")
+	public boolean startThreads()
+	{
+		return threadService.startThreads();
 	}
 	/*
 	 * @RequestMapping(value="/enableScheduling",method = RequestMethod.GET) public
