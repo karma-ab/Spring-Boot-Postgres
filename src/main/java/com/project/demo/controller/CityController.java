@@ -105,9 +105,7 @@ public class CityController {
 	@RequestMapping(value="/jsonFlat",method = RequestMethod.POST)
 	public String flatJson(@RequestBody String obj)
 	{
-		System.out.println(obj);
 		return adhocService.getJsonFlat(new JSONObject(obj));
-		//return adhocService.getJsonFlat(new JSONObject("{\"Name\":\"Abhijit\",\"Surname\":\"Vishwakarma\",\"Address\": {\"residential\":\"Dahisar East\",\"work\" :\"Airoli\"}}"));
 	}
 	/*
 	 * @RequestMapping(value="/enableScheduling",method = RequestMethod.GET) public
