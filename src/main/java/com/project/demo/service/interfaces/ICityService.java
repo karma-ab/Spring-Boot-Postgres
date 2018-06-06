@@ -20,4 +20,5 @@ public interface ICityService {
 	public List<MayorMaster> addMayor(List<MayorDTO> mayorList);
 
 	public MessageDTO addCityMayor(List<CityMayorDTO> obj);
+	
 }

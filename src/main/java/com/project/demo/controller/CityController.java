@@ -2,6 +2,7 @@ package com.project.demo.controller;
 
 import java.util.List;
 
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,9 +16,9 @@ import com.project.demo.dto.CityMayorDTO;
 import com.project.demo.dto.MayorDTO;
 import com.project.demo.dto.MessageDTO;
 import com.project.demo.dto.MongoUserDTO;
-import com.project.demo.entity.AssetInventory;
 import com.project.demo.entity.CityMaster;
 import com.project.demo.entity.MayorMaster;
+import com.project.demo.service.AdhocService;
 import com.project.demo.service.AssetService;
 import com.project.demo.service.MongoService;
 import com.project.demo.service.ScheduledClassService;
@@ -42,6 +43,9 @@ public class CityController {
 	
 	@Autowired
 	ThreadService threadService;
+	
+	@Autowired
+	AdhocService adhocService;
 
 	@RequestMapping(value = "/showCities", method = RequestMethod.GET)
 	@ResponseBody
@@ -96,6 +100,14 @@ public class CityController {
 	public boolean startThreads()
 	{
 		return threadService.startThreads();
+	}
+	
+	@RequestMapping(value="/jsonFlat",method = RequestMethod.POST)
+	public String flatJson(@RequestBody String obj)
+	{
+		System.out.println(obj);
+		return adhocService.getJsonFlat(new JSONObject(obj));
+		//return adhocService.getJsonFlat(new JSONObject("{\"Name\":\"Abhijit\",\"Surname\":\"Vishwakarma\",\"Address\": {\"residential\":\"Dahisar East\",\"work\" :\"Airoli\"}}"));
 	}
 	/*
 	 * @RequestMapping(value="/enableScheduling",method = RequestMethod.GET) public
