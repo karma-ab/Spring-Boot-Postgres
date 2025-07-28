@@ -85,6 +85,13 @@ public class MongoUserDTO {
 	public MongoUserDTO() {
 		
 	}
+
+	// Simple constructor for testing
+	public MongoUserDTO(String userId, String email, String name) {
+		this.userId = userId;
+		this.name = name;
+		// Note: email field doesn't exist in this DTO, using name for both
+	}
 	@Override
 	public String toString() {
 		return "MongoUserDTO [userId=" + userId + ", name=" + name + ", creationDate=" + creationDate

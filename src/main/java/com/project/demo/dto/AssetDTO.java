@@ -145,6 +145,13 @@ public class AssetDTO {
 	public AssetDTO() {
 	}
 
+	// Simple constructor for testing
+	public AssetDTO(Long id, String assetName, double assetPrice) {
+		this.id = id;
+		this.assetName = assetName;
+		this.assetPrice = (long) assetPrice;
+	}
+
 	@Override
 	public String toString() {
 		return "AssetDTO [id=" + id + ", assetName=" + assetName + ", assetPrice=" + assetPrice + ", eligibility="

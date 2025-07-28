@@ -36,6 +36,13 @@ public class MayorMaster {
 		this.cityMayor = cityMayor;
 	}
 
+	// Simple constructor for testing
+	public MayorMaster(Long mayorId, String name, int age) {
+		this.mayorId = mayorId;
+		this.name = name;
+		this.age = age;
+	}
+
 	public Long getMayorId() {
 		return mayorId;
 	}
