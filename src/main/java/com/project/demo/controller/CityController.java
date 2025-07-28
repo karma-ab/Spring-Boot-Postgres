@@ -25,6 +25,15 @@ import com.project.demo.service.ScheduledClassService;
 import com.project.demo.service.ThreadService;
 import com.project.demo.service.interfaces.ICityService;
 
+/**
+ * @deprecated This controller is deprecated. Use the new RESTful controllers:
+ * - CityRestController for city operations
+ * - MayorRestController for mayor operations  
+ * - AssetRestController for asset operations
+ * - UserRestController for user operations
+ * - UtilityRestController for utility operations
+ */
+@Deprecated
 @RestController
 @RequestMapping("/")
 public class CityController {

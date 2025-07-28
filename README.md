@@ -116,75 +116,160 @@ The application will start on `http://localhost:8080`
 
 ## 📚 API Endpoints
 
-### City Management
+### 🆕 RESTful API v1 (Recommended)
+
+The application now provides modern RESTful endpoints following REST conventions:
+
+#### Cities API (`/api/v1/cities`)
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/showCities` | Get all cities |
-| POST | `/cityAdd` | Add a new city |
+| GET | `/api/v1/cities` | Get all cities |
+| POST | `/api/v1/cities` | Create new cities |
+| POST | `/api/v1/cities/{cityId}/mayors` | Assign mayors to a city |
 
-### Mayor Management
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/showMayors` | Get all mayors |
-| POST | `/mayorAdd` | Add a new mayor |
-| POST | `/city/mayor/add` | Associate a mayor with a city |
-
-### Asset Management
+#### Mayors API (`/api/v1/mayors`)
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/sortAsset` | Get sorted assets |
+| GET | `/api/v1/mayors` | Get all mayors |
+| POST | `/api/v1/mayors` | Create new mayors |
 
-### User Management (MongoDB)
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/fetchUsers` | Get all users from MongoDB |
-| POST | `/saveUsers` | Save users to MongoDB |
-
-### Utility Endpoints
+#### Assets API (`/api/v1/assets`)
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/startThreads` | Start multithreading demo |
-| POST | `/jsonFlat` | Flatten JSON objects |
+| GET | `/api/v1/assets` | Get sorted assets |
+| GET | `/api/v1/assets?sort=price` | Get assets sorted by price |
+
+#### Users API (`/api/v1/users`)
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/v1/users` | Get all users from MongoDB |
+| POST | `/api/v1/users` | Create new users in MongoDB |
+
+#### Utilities API (`/api/v1/utilities`)
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/v1/utilities/threads/start` | Start multithreading demo |
+| POST | `/api/v1/utilities/json/flatten` | Flatten JSON objects |
+
+### ⚠️ Legacy Endpoints (Deprecated)
+
+The following endpoints are deprecated and will be removed in future versions. Please migrate to the RESTful API above.
+
+| Method | Endpoint | Description | New Endpoint |
+|--------|----------|-------------|--------------|
+| GET | `/showCities` | Get all cities | `GET /api/v1/cities` |
+| POST | `/cityAdd` | Add a new city | `POST /api/v1/cities` |
+| GET | `/showMayors` | Get all mayors | `GET /api/v1/mayors` |
+| POST | `/mayorAdd` | Add a new mayor | `POST /api/v1/mayors` |
+| POST | `/addCityMayor` | Associate mayor with city | `POST /api/v1/cities/{cityId}/mayors` |
+| GET | `/sortAsset` | Get sorted assets | `GET /api/v1/assets` |
+| GET | `/fetchUsers` | Get all users | `GET /api/v1/users` |
+| POST | `/saveUsers` | Save users | `POST /api/v1/users` |
+| GET | `/startThreads` | Start threads | `POST /api/v1/utilities/threads/start` |
+| POST | `/getJsonFlat` | Flatten JSON | `POST /api/v1/utilities/json/flatten` |
 
 ## 📝 Sample API Requests
 
-### Add a City
+### RESTful API Examples
+
+#### Get All Cities
 ```bash
-curl -X POST http://localhost:8080/cityAdd \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "New York",
-    "population": 8000000
-  }'
+curl -X GET http://localhost:8080/api/v1/cities \
+  -H "Accept: application/json"
 ```
 
-### Add a Mayor
+#### Create Cities
 ```bash
-curl -X POST http://localhost:8080/mayorAdd \
+curl -X POST http://localhost:8080/api/v1/cities \
   -H "Content-Type: application/json" \
-  -d '{
-    "name": "John Doe",
-    "age": 45
-  }'
+  -d '[
+    {
+      "name": "New York",
+      "population": 8000000
+    },
+    {
+      "name": "Los Angeles", 
+      "population": 4000000
+    }
+  ]'
 ```
 
-### Get All Cities
+#### Create Mayors
 ```bash
-curl -X GET http://localhost:8080/showCities
+curl -X POST http://localhost:8080/api/v1/mayors \
+  -H "Content-Type: application/json" \
+  -d '[
+    {
+      "name": "John Doe",
+      "age": 45
+    },
+    {
+      "name": "Jane Smith",
+      "age": 52
+    }
+  ]'
 ```
 
-### Associate Mayor with City
+#### Get All Mayors
 ```bash
-curl -X POST http://localhost:8080/city/mayor/add \
+curl -X GET http://localhost:8080/api/v1/mayors \
+  -H "Accept: application/json"
+```
+
+#### Assign Mayor to City
+```bash
+curl -X POST http://localhost:8080/api/v1/cities/1/mayors \
+  -H "Content-Type: application/json" \
+  -d '[
+    {
+      "mayorId": 1
+    }
+  ]'
+```
+
+#### Get Assets
+```bash
+curl -X GET http://localhost:8080/api/v1/assets \
+  -H "Accept: application/json"
+```
+
+#### Create Users
+```bash
+curl -X POST http://localhost:8080/api/v1/users \
+  -H "Content-Type: application/json" \
+  -d '[
+    {
+      "name": "John Doe"
+    },
+    {
+      "name": "Jane Smith"
+    }
+  ]'
+```
+
+#### Start Background Threads
+```bash
+curl -X POST http://localhost:8080/api/v1/utilities/threads/start \
+  -H "Content-Type: application/json"
+```
+
+#### Flatten JSON
+```bash
+curl -X POST http://localhost:8080/api/v1/utilities/json/flatten \
   -H "Content-Type: application/json" \
   -d '{
-    "cityId": 1,
-    "mayorId": 1
+    "user": {
+      "name": "John",
+      "address": {
+        "city": "New York",
+        "zip": "10001"
+      }
+    }
   }'
 ```
 
@@ -197,6 +282,12 @@ src/
 │   │   ├── aopConfig/          # AOP configuration and aspects
 │   │   ├── comparator/         # Custom comparators
 │   │   ├── controller/         # REST controllers
+│   │   │   ├── CityController.java        # Legacy controller (deprecated)
+│   │   │   ├── CityRestController.java    # RESTful cities API
+│   │   │   ├── MayorRestController.java   # RESTful mayors API
+│   │   │   ├── AssetRestController.java   # RESTful assets API
+│   │   │   ├── UserRestController.java    # RESTful users API
+│   │   │   └── UtilityRestController.java # RESTful utilities API
 │   │   ├── cors/              # CORS configuration
 │   │   ├── dto/               # Data Transfer Objects
 │   │   ├── entity/            # JPA entities
@@ -231,11 +322,15 @@ src/
 - **ScheduledClassService**: Background task scheduling
 
 ### Features Demonstrated
+- **RESTful API Design**: Modern REST endpoints with proper HTTP methods and status codes
+- **API Versioning**: Versioned API endpoints (`/api/v1/`) for backward compatibility
+- **Resource-based URLs**: Clean, intuitive URL structure following REST conventions
 - **AOP Logging**: Method execution logging using aspects
 - **Exception Handling**: Global exception handler with custom error responses
 - **JSON Processing**: JSON flattening and manipulation
 - **Multithreading**: Concurrent processing examples
 - **Scheduled Tasks**: Background job processing
+- **Backward Compatibility**: Legacy endpoints maintained while encouraging migration
 
 ## 🧪 Testing
 
